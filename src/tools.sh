@@ -11,7 +11,7 @@ dl_gh() {
         printf '%b\n' '\033[0;31mUsage: dl_gh user repo tag\033[0m' 
         return 1 
     fi 
-    trap 'rm -f "$name"; exit 1' INT TERM ERR
+    trap 'rm -f ${#downloaded_files[@]}; exit 1' INT TERM ERR
     for repo in $repos; do
         printf "\033[1;33mGetting asset URLs for \"%s\"...\033[0m\n" "$repo"
         asset_urls=$(wget -qO- "https://api.github.com/repos/$user/$repo/releases/$tag" \

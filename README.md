@@ -46,3 +46,7 @@ Necessary for non-root users. Install first
 
 # About
 This repository can patch YouTube/YouTube Music from revanced/inotia00 source
+
+# Note
+
+I don't allow someone with a github named Fioren to download and use my new code anymore.  He/she uses my code but said: "I was created". 

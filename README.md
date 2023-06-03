@@ -6,7 +6,7 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 # Note
 
-I don't allow someone with a github named Fioren to download and use my new code.  He/she uses my code but said: "I was created". 
+🚫 I don't allow someone with a github named Fioren to download and use my new code.  He/she was used my code but said: "I was created". 
 
 <div align="center">
 
@@ -35,6 +35,54 @@ I don't allow someone with a github named Fioren to download and use my new code
 ✅ Run github actions and wait
 
 ✅ Take apk in releases
+
+# Add new app or new source to patch
+
+1️⃣ Download source you need
+
+➡ Use : dl_gh "user" "repo" tag" 
+
+➡ (user = revanced,inotia00,kazimmt,kidatai31...) 
+
+➡ (repo = revanced-patches revanced-cli revanced-integrations) You can use j-hc/revanced-cli to --riplib)
+
+➡ (tag = latest or tags/v.... if you need specific patch version)
+
+2️⃣ Patch key words (skip if you no need in/exclude-patches) 
+
+➡ In folder patches creat new file app-to-patches/include-patches and put include patches 
+
+➡ Creat exclude-patches and put exclude patches 
+
+➡ Use : get_patches_key "app-to-paches"
+
+3️⃣ Get version apk supported 
+
+➡ Use: get_ver "patch" "package"
+
+➡ Patch: find in patches.json compatible patch with version
+
+➡ Package: package name app-to-paches 
+
+➡ Skip this if revanced supported all version
+
+4️⃣ Get apk
+
+➡ In new code I will input all app link revanced supported. Find them(app_name) in [apkmirror.info](./scr/apkmirror.info) and [uptodown.info](./src/uptodown.info)
+
+➡ Use : get_apkmirror "app_name" for universal app like :YouTube,Twitch...
+         get_apkmirror "app_name" "arch" for arch app like : YouTube Music,MesMessenger...
+         get_uptodown "app_name"
+
+5️⃣ Patch app
+
+➡ Use: patch "app_name" "name-you-like"
+
+➡ (apapp_name: above) (name-you-like: Example YouTube-Extended-v$version)
+
+# Problem 
+
+Some apk download not exactly or not supported. Use between APKMirror and Uptodown
 
 # Download mMicroG patched hide-icon from inotia00 patch/source 
 

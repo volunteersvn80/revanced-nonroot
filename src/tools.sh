@@ -115,7 +115,7 @@ dl_apkmirror() {
   req "$url" "$output"
 }
 get_apkmirror() {
-  source ./links-info/apkmirror.info
+  source ./src/apkmirror.info
   local app_name=$1 
   local arch=$2
   if [[ -z ${apps[$app_name]} ]]; then

@@ -68,11 +68,15 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 4️⃣ Get apk
 
-➡ In new code I will input all app link revanced supported. Find them(app_name) in [apkmirror.info](./scr/apkmirror.info) and [uptodown.info](./src/uptodown.info)
+➡ In new code I will input all app link revanced supported. Find them(app_name) in [apkmirror.info](./src/apkmirror.info) and [uptodown.info](./src/uptodown.info)
 
-➡ Use : get_apkmirror "app_name" for universal app like :YouTube,Twitch...
-         get_apkmirror "app_name" "arch" for arch app like : YouTube Music,MesMessenger...
-         get_uptodown "app_name"
+➡ Use : 
+
+get_apkmirror "app_name" for universal app like :YouTube,Twitch...
+         
+get_apkmirror "app_name" "arch" for arch app like : YouTube Music,MesMessenger...
+
+get_uptodown "app_name"
 
 5️⃣ Patch app
 

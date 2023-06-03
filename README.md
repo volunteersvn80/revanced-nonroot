@@ -6,7 +6,7 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 # Note
 
-🚫 I don't allow someone with a github named Fioren to download and use my new code.  He/she was used my code but said: "I was created" and "my code"
+🚫 I don't allow someone with a github name's Fioren to download and use my new code.  He/she was used my code but said: "I was created" and "my code"
 
 <div align="center">
 

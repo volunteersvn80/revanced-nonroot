@@ -37,11 +37,11 @@ get_apkmirror "twitch"
 #get_uptodown "twitch"
 patch "twitch" "twitch-revanced"
 
-# Patch Tiktok 
+# Patch Tiktok Asia or Global. Keyword patch is the same get Apk
 get_patches_key "tiktok"
-#get_ver "feed-filter" "com.ss.android.ugc.trill"
-get_apkmirror "tiktok"
-#get_uptodown "tiktok-asia"
+#get_apkmirror "tiktok"
+get_uptodown "tiktok-asia"
+#get_uptodown "tiktok-global
 patch "tiktok-asia" "tiktok-asia-revanced"
 
 # Patch YouTube 

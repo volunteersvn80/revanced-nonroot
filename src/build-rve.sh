@@ -28,13 +28,13 @@ dl_gh "inotia00" "revanced-patches revanced-cli revanced-integrations" "latest"
 get_patches_key "youtube-revanced-extended"
 get_ver "hide-general-ads" "com.google.android.youtube"
 get_apkmirror "youtube"
-#get_uptodown "youtube" "youtube"
+#get_uptodown "youtube"
 patch "youtube" "youtube-revanced-extended"
 
 # Patch YouTube Music Extended 
 get_patches_key "youtube-music-revanced-extended"
 #get_apkmirror "youtube-music" "arm64-v8a"
-get_uptodown "youtube-music" "youtube-music" 
+get_uptodown "youtube-music" 
 patch "youtube-music" "youtube-music-revanced-extended"
 
 # Patch microG

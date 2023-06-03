@@ -40,8 +40,8 @@ patch "twitch" "twitch-revanced"
 # Patch Tiktok 
 get_patches_key "tiktok"
 #get_ver "feed-filter" "com.ss.android.ugc.trill"
-#get_apkmirror "tiktok"
-get_uptodown "tiktok-asia"
+get_apkmirror "tiktok"
+#get_uptodown "tiktok-asia"
 patch "tiktok-asia" "tiktok-asia-revanced"
 
 # Patch YouTube 

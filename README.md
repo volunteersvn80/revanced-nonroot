@@ -4,6 +4,10 @@ Code APKmirror: [revanced-build-template](https://github.com/n0k0m3/revanced-bui
 
 Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
 
+# Note
+
+I don't allow someone with a github named Fioren to download and use my new code.  He/she uses my code but said: "I was created". 
+
 <div align="center">
 
 [![](https://visitcount.itsvg.in/api?id=luxysiv&label=Visitors&color=0&icon=0&pretty=true)](https://visitcount.itsvg.in)
@@ -47,6 +51,3 @@ Necessary for non-root users. Install first
 # About
 This repository can patch YouTube/YouTube Music from revanced/inotia00 source
 
-# Note
-
-I don't allow someone with a github named Fioren to download and use my new code.  He/she uses my code but said: "I was created". 

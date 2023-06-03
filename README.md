@@ -66,6 +66,8 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 ➡ Skip this if revanced supported all version
 
+➡ Use version="version" to set specific version 
+
 4️⃣ Get apk
 
 ➡ In new code I will input all app link revanced supported. Find them(app_name) in [apkmirror.info](./src/apkmirror.info) and [uptodown.info](./src/uptodown.info)

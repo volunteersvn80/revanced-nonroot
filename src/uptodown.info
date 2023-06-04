@@ -48,6 +48,7 @@ declare -A apps=(
   ["meme-generator"]='{"app_link":"https://meme-generator-free.en.uptodown.com/android"}'
   # My expenses
   ["expenses"]='{"app_link":"https://my-expenses.en.uptodown.com/android"}' 
+  # VSCO
   ["vsco"]='{"app_link":"https://vsco-cam.en.uptodown.com/android"}' 
   # Ticktick to do list
   ["ticktick"]='{"app_link":"https://ticktick.en.uptodown.com/android"}' 

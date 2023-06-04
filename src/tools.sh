@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#:::::::::::::::::
-#Download Github::
-#:::::::::::::::::
 dl_gh() {
     local user=$1
     local repos=$2
@@ -39,9 +36,6 @@ dl_gh() {
     return 0
 }
 
-#:::::::::::::::::::::::::::::::::::::::::::::
-#Prepare exclude patches and include patches::
-#:::::::::::::::::::::::::::::::::::::::::::::
 get_patches_key() {
     local folder="$1"
     local exclude_file="patches/${folder}/exclude-patches"
@@ -86,20 +80,16 @@ get_patches_key() {
     return 0
 }
 
-#::::::::::::::
-#Download APK::
-#::::::::::::::
 req() {  
     wget -nv -O "$2" -U "Mozilla/5.0 (X11; Linux x86_64; rv:111.0) Gecko/20100101 Firefox/111.0" "$1" 
 } 
 
-#:::::::::::
-#Apkmirror::
-#:::::::::::
 get_apkmirror_vers() {  
     req "$1" - | sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p' 
+
 } 
- get_largest_ver() { 
+
+get_largest_ver() { 
    local max=0 
    while read -r v || [ -n "$v" ]; do                    
          if [[ ${v//[!0-9]/} -gt ${max//[!0-9]/} ]]; then max=$v; fi 
@@ -114,6 +104,7 @@ dl_apkmirror() {
   url="https://www.apkmirror.com$(req "$url" - | tr '\n' ' ' | sed -n 's;.*href="\(.*key=[^"]*\)">.*;\1;p')"
   req "$url" "$output"
 }
+
 get_apkmirror() {
   eval "$(cat ./src/apkmirror.info)"
   local app_name=$1 
@@ -168,15 +159,15 @@ get_apkmirror() {
   fi
 }
 
-#:::::::::::
-#Uptodown ::
-#:::::::::::
 get_uptodown_resp() {
     req "${1}/versions" -
 }
+
 get_uptodown_vers() {
     sed -n 's;.*version">\(.*\)</span>$;\1;p' <<< "$1"
 }
+
+
 dl_uptodown() {
     local uptwod_resp=$1 version=$2 output=$3
     local url
@@ -184,6 +175,7 @@ dl_uptodown() {
     url=$(req "$url" - | sed -n 's;.*data-url="\(.*\)".*;\1;p') || return 1
     req "$url" "$output"
 }
+
 get_uptodown() {
     eval "$(cat ./src/uptodown.info)"
     local app_name=$1 
@@ -209,10 +201,6 @@ get_uptodown() {
     fi
 }
 
-
-#:::::::::::::::::::::::::::::::
-#Get largest supported version::
-#:::::::::::::::::::::::::::::::
 get_ver() {
     eval "$(cat ./src/version.info)"
     local app_name=$1 
@@ -237,9 +225,6 @@ get_ver() {
     return 0
 }
 
-#:::::::::::
-#Patch APK::
-#:::::::::::
 patch() {
   local apk_name=$1
   local apk_out=$2

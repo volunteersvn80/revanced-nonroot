@@ -60,9 +60,7 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 ➡ Use: get_ver "app_name" (Check in [version.info](./src/version.info)
 
-
-
-➡ Skip this if revanced supported all version
+➡ Skip this if not found 
 
 ➡ Use version="version" to set specific version 
 

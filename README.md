@@ -58,9 +58,9 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 3️⃣ Get version apk supported 
 
-➡ Use: get_ver "app_name" (Check in [version.info](./src/version.info)
+➡ Use: get_ver "app_name" (Check in [version.info](./src/version.info) (Only revanced/inotia00 source)
 
-➡ Skip this if not found 
+➡ Skip this if not found or use get_ver "patch_name" "pkg_name" for different revanced/inotia00 source
 
 ➡ Use version="version" to set specific version 
 

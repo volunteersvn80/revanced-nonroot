@@ -214,8 +214,10 @@ get_uptodown() {
 #Get largest supported version::
 #:::::::::::::::::::::::::::::::
 get_ver() {
-    local patch_name=$1
-    local pkg_name=$2
+    eval "$(cat ./src/version.info)"
+    local app_name=$1 
+    local patch_name=$(echo ${versions[$app_name]} | jq -r '.patch')
+    local pkg_name=$(echo ${versions[$app_name]} | jq -r '.package')
     if [[ ! -f patches.json ]]; then
        printf "\033[0;31mError: patches.json file not found.\033[0m\n"
        return 1

@@ -32,7 +32,7 @@ patch "messenger" "messenger-revanced"
 
 # Patch Twitch 
 get_patches_key "twitch"
-get_ver "block-video-ads" "tv.twitch.android.app"
+get_ver "twitch"
 get_apkmirror "twitch"
 #get_uptodown "twitch"
 patch "twitch" "twitch-revanced"
@@ -46,14 +46,14 @@ patch "tiktok-asia" "tiktok-asia-revanced"
 
 # Patch YouTube 
 get_patches_key "youtube-revanced"
-get_ver "video-ads" "com.google.android.youtube"
+get_ver "youtube-rv"
 get_apkmirror "youtube"
 #get_uptodown "youtube"
 patch "youtube" "youtube-revanced"
 
 # Patch YouTube Music 
 get_patches_key "youtube-music-revanced"
-get_ver "hide-get-premium" "com.google.android.apps.youtube.music"
+get_ver "youtube-music-rv"
 get_apkmirror "youtube-music" "arm64-v8a"
 #get_uptodown "youtube-music"
 patch "youtube-music" "youtube-music-revanced"

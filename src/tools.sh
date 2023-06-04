@@ -214,11 +214,13 @@ get_uptodown() {
 #Get largest supported version::
 #:::::::::::::::::::::::::::::::
 get_ver() {
+    local patch_name=$1
+    local pakg_name=$2
     if [[ ! -f patches.json ]]; then
        printf "\033[0;31mError: patches.json file not found.\033[0m\n"
        return 1
      else
-       export version=$(jq -r --arg patch_name "$1" --arg pkg_name "$2" '
+       export version=$(jq -r --arg patch_name "patch_name" --arg pkg_name "pkg_name" '
        .[]
        | select(.name == $patch_name)
        | .compatiblePackages[]

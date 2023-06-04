@@ -58,11 +58,9 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 3️⃣ Get version apk supported 
 
-➡ Use: get_ver "patch" "package"
+➡ Use: get_ver "app_name" (Check in [version.info](./src/version.info)
 
-➡ Patch: find in patches.json compatible patch with version
 
-➡ Package: package name app-to-paches 
 
 ➡ Skip this if revanced supported all version
 

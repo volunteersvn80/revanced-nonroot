@@ -220,7 +220,7 @@ get_ver() {
        printf "\033[0;31mError: patches.json file not found.\033[0m\n"
        return 1
      else
-       export version=$(jq -r --arg patch_name "patch_name" --arg pkg_name "pkg_name" '
+       export version=$(jq -r --arg patch_name "$patch_name" --arg pkg_name "$pkg_name" '
        .[]
        | select(.name == $patch_name)
        | .compatiblePackages[]

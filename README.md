@@ -82,7 +82,7 @@ get_uptodown "app_name"
 
 ➡ (app_name: above) (name-you-like: Example YouTube-Extended-v$version)
 
-➡ (arch: arm64-v8a,armeabi-v7a,x86,x86_64 and arm) Split apk if you like. Note: blank is same original input APK. Need use j-hc/cli to split Revanced, Revanced Extended still use inotia00/cli
+➡ (arch: arm64-v8a,armeabi-v7a,x86,x86_64 and arm) Split apk if you need. Note: blank is same original input APK. Need use j-hc/cli to split Revanced, Revanced Extended still use inotia00/cli
 
 # Problem 
 

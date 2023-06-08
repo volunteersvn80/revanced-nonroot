@@ -78,9 +78,11 @@ get_uptodown "app_name"
 
 5️⃣ Patch app
 
-➡ Use: patch "app_name" "name-you-like"
+➡ Use: patch "app_name" "name-you-like" "arch"
 
-➡ (apapp_name: above) (name-you-like: Example YouTube-Extended-v$version)
+➡ (app_name: above) (name-you-like: Example YouTube-Extended-v$version)
+
+➡ (arch: arm64-v8a armeabi-v7a x86 x86_64 and arm) Split apk if you like. Note: blank is same original input APK
 
 # Problem 
 

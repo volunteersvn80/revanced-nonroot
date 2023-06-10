@@ -211,7 +211,7 @@ patch() {
     printf "\033[0;36m->%s\033[0m\n" "$file"
   done
   printf "\033[0;32mINCLUDE PATCHES :%s\033[0m\n\033[0;31mEXCLUDE PATCHES :%s\033[0m\n" "${include_patches[*]}" "${exclude_patches[*]}"
-  if [[ -v arch_map[$arch] ]]; then
+  if [[ -v $arch ]]; then
     java -jar "$cli_jar" \
       -m "$integrations_apk" \
       -b "$patches_jar" \
@@ -222,7 +222,7 @@ patch() {
       --keystore=./src/ks.keystore \
       -o "build/$apk_out.apk"
   fi 
-  if [[ -z arch_map[$arch] ]]; then
+  if [[ -z $arch ]]; then
     java -jar "$cli_jar" \
       -m "$integrations_apk" \
       -b "$patches_jar" \

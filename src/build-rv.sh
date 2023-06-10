@@ -24,6 +24,12 @@ rm -f ./*.txt
 #Download Revanced patches
 dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 
+# Reddit
+get_patches_key "reddit"
+get_apkmirror "reddit"
+#get_uptodown "reddit"
+patch "reddit" "reddit-revanced"
+
 # Messenger
 get_patches_key "messenger"
 #get_apkmirror "messenger" "arm64-v8a"

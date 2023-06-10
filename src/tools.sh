@@ -230,11 +230,11 @@ patch() {
               -m "$integrations_apk" \
               -b "$patches_jar" \
               -a "$base_apk" \
-               ${exclude_patches[@]} \
-               ${include_patches[@]} \
-               ${arch_map[$arch]} \
-               --keystore=./src/ks.keystore \
-               -o "build/$apk_out.apk"
+              ${exclude_patches[@]} \
+              ${include_patches[@]} \
+              ${arch_map[$arch]} \
+              --keystore=./src/ks.keystore \
+              -o "build/$apk_out.apk"
         fi
     fi
     printf "\033[0;32mPatch \033[0;31m\"%s\" \033[0;32mis finished!\033[0m\n" "$apk_out"

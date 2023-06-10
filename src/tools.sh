@@ -164,7 +164,7 @@ get_uptodown() {
 }
 
 get_ver() {
-    source ./src/version.info
+    source ./src/versions.info
     local app_name=$1 
     local patch_name=$(echo ${versions[$app_name]} | jq -r '.patch')
     local pkg_name=$(echo ${versions[$app_name]} | jq -r '.package')
@@ -188,7 +188,7 @@ get_ver() {
 }
 
 patch() {
-  source ./src/rip_lip.info
+  source ./src/--rip-lib.info
   local apk_name=$1
   local apk_out=$2
   local arch=$3
@@ -222,15 +222,20 @@ patch() {
       --keystore=./src/ks.keystore \
       -o "build/$apk_out.apk"
   else
-    java -jar "$cli_jar" \
-      -m "$integrations_apk" \
-      -b "$patches_jar" \
-      -a "$base_apk" \
-      ${exclude_patches[@]} \
-      ${include_patches[@]} \
-      ${arch_map[$arch]} \
-      --keystore=./src/ks.keystore \
-      -o "build/$apk_out.apk"
+    if [[ ! ${arch_map[$arch]+_} ]]; then
+      printf "\033[0;31mError: invalid arch value\033[0m\n"
+      exit 1
+    else
+      java -jar "$cli_jar" \
+        -m "$integrations_apk" \
+        -b "$patches_jar" \
+        -a "$base_apk" \
+        ${exclude_patches[@]} \
+        ${include_patches[@]} \
+        ${arch_map[$arch]} \
+        --keystore=./src/ks.keystore \
+        -o "build/$apk_out.apk"
+    fi
   fi
   printf "\033[0;32mPatch \033[0;31m\"%s\" \033[0;32mis finished!\033[0m\n" "$apk_out"
   vars_to_unset=(

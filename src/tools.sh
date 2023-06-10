@@ -188,16 +188,10 @@ get_ver() {
 }
 
 patch() {
+  eval $"(cat ./src/rip_lip.info)"
   local apk_name=$1
   local apk_out=$2
   local arch=$3
-  declare -A arch_map=(
-    ["arm64-v8a"]="--rip-lib x86 --rip-lib x86_64 --rip-lib armeabi-v7a"
-    ["armeabi-v7a"]="--rip-lib x86 --rip-lib x86_64 --rip-lib arm64-v8a"
-    ["x86"]="--rip-lib x86_64 --rip-lib arm64-v8a --rip-lib armeabi-v7a"
-    ["x86_64"]="--rip-lib x86 --rip-lib armeabi-v7a --rip-lib arm64-v8a"
-    ["arm"]="--rip-lib x86 --rip-lib x86_64"
-  )
   printf "\033[1;33mStarting patch \033[0;31m\"%s\"\033[1;33m...\033[0m\n" "$apk_out"
   local base_apk=$(find -name "$apk_name.apk" -print -quit)
   if [[ ! -f "$base_apk" ]]; then

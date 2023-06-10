@@ -232,8 +232,6 @@ patch() {
       --keystore=./src/ks.keystore \
       -o "build/$apk_out.apk"
   fi
-  
-  
   printf "\033[0;32mPatch \033[0;31m\"%s\" \033[0;32mis finished!\033[0m\n" "$apk_out"
   vars_to_unset=(
     "version"

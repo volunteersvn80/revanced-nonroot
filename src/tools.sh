@@ -138,7 +138,7 @@ function get_uptodown_vers() {
     sed -n 's;.*version">\(.*\)</span>$;\1;p' <<< "$1"
 }
 
-dl_uptodown() {
+function dl_uptodown() {
     local uptwod_resp=$1 version=$2 output=$3
     local url
     url=$(grep -F "${version}</span>" -B 2 <<< "$uptwod_resp" | head -1 | sed -n 's;.*data-url="\(.*\)".*;\1;p') || return 1

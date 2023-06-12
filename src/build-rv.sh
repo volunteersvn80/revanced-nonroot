@@ -25,11 +25,10 @@ rm -f ./*.txt
 dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 
 # Reddit
-get_patches_key "reddit"
-version="2023.21.0"
-get_apkmirror "reddit"
+#get_patches_key "reddit"
+#get_apkmirror "reddit"
 #get_uptodown "reddit"
-patch "reddit" "reddit-revanced"
+#patch "reddit" "reddit-revanced"
 
 # Messenger
 get_patches_key "messenger"

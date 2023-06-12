@@ -26,6 +26,7 @@ dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 
 # Reddit
 get_patches_key "reddit"
+version="2023.21.0"
 get_apkmirror "reddit"
 #get_uptodown "reddit"
 patch "reddit" "reddit-revanced"

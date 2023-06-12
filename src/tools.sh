@@ -37,41 +37,21 @@ function dl_gh() {
 }
 
 function get_patches_key() {
-    local folder="$1"
-    local exclude_file="patches/${folder}/exclude-patches"
-    local include_file="patches/${folder}/include-patches"
-    local word
-    for file in "$exclude_file" "$include_file"; do
-        if [ ! -d "${file%/*}" ]; then
-            printf "\033[0;31mFolder not found: \"%s\"\n\033[0m" "${file%/*}"
-            return 1
-        fi
-        if [ ! -f "$file" ]; then
-            printf "\033[0;31mFile not found: \"%s\"\n\033[0m" "$file"
-            return 1
-        fi
-        if [ ! -r "$file" ]; then
-            printf "\033[0;31mCannot read file: \"%s\"\n\033[0m" "$file"
-            return 1
+    local patch_file="$1"
+    exclude_string=($(awk -F '=' '/exclude-patches/{print $2}' patches/$patch_file | tr ' ' '\n'))
+    include_string=($(awk -F '=' '/include-patches/{print $2}' patches/$patch_file | tr ' ' '\n'))
+    exclude_patches=""
+    include_patches=""
+    for patch in "${exclude_string[@]}" ; do
+        exclude_patches+="--exclude $patch "
+        if [[ " ${include_string[@]} " =~ " $patch " ]]; then
+            printf "\033[0;31mPatch \"%s\" is specified both as exclude and include\033[0m\n" "$patch"
+            exit 1
         fi
     done
-    while IFS= read -r word; do
-        if [[ -n "$word" ]]; then
-            exclude_patches+=("--exclude" "$word")
-        fi
-    done < "$exclude_file"
-    while IFS= read -r word; do
-        if [[ -n "$word" ]]; then
-            include_patches+=("--include" "$word")
-        fi
-    done < "$include_file"
-    for word in "${exclude_patches[@]}"; do
-        if [[ " ${include_patches[*]} " =~ " $word " ]]; then
-          printf "\033[0;31mPatch \"%s\" is specified both as exclude and include\033[0m\n" "$word"
-          return 1
-        fi
+    for patch in "${include_string[@]}" ; do
+        include_patches+="--include $patch "
     done
-    return 0
 }
 
 function req() {  
@@ -210,28 +190,28 @@ function patch() {
     for file in "$cli_jar" "$integrations_apk" "$patches_jar" "$base_apk"; do
         printf "\033[0;36m->%s\033[0m\n" "$file"
     done
-    printf "\033[0;32mINCLUDE PATCHES :%s\033[0m\n\033[0;31mEXCLUDE PATCHES :%s\033[0m\n" "${include_patches[*]}" "${exclude_patches[*]}"
+    printf "\033[0;32mINCLUDE PATCHES :%s\033[0m\n\033[0;31mEXCLUDE PATCHES :%s\033[0m\n" "${include_string[*]}" "${exclude_string[*]}"
     if [[ -z "$arch" ]]; then
         shift
         java -jar "$cli_jar" \
              --apk "$base_apk" \
              --bundle "$patches_jar" \
              --merge "$integrations_apk" \
-             ${exclude_patches[@]} \
-             ${include_patches[@]} \
+             ${exclude_patches} \
+             ${include_patches} \
              --keystore ./src/ks.keystore \
              --out "build/$apk_out.apk"
     else
         if [[ ! ${arch_map[$arch]+_} ]]; then
-            printf "\033[0;31mError: invalid arch value\033[0m\n"
+            printf "\033[0;31mError: invalid split arch value\033[0m\n"
             exit 1
         else
             java -jar "$cli_jar" \
                  --apk "$base_apk" \
                  --bundle "$patches_jar" \
                  --merge "$integrations_apk" \
-                 ${exclude_patches[@]} \
-                 ${include_patches[@]} \
+                 ${exclude_patches} \
+                 ${include_patches} \
                  ${arch_map[$arch]} \
                  --keystore ./src/ks.keystore \
                  --out "build/$apk_out.apk"
@@ -242,6 +222,8 @@ function patch() {
         "version"
         "exclude_patches"
         "include_patches"
+        "exclude_string"
+        "include_string"
     )
     for varname in "${vars_to_unset[@]}"; do
         if [[ -v "$varname" ]]; then

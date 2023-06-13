@@ -1,2 +1,2 @@
-exclude-patches=custom-branding-microg-revancify-red
-include-patches=hide-icon-from-launcher
+--exclude custom-branding-microg-revancify-red
+--include hide-icon-from-launcher

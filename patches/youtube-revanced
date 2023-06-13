@@ -1,1 +1,1 @@
-exclude-patches=custom-branding custom-video-buffer enable-debugging hide-autoplay-button premium-heading
+--exclude custom-branding custom-video-buffer enable-debugging hide-autoplay-button premium-heading

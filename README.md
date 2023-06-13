@@ -52,7 +52,11 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 ➡ In folder patches creat new file app-to-patches
 
-➡ Create patch to include/exclude. Exp: exclude-patches = patch1 patch2 patch3...
+➡ Create patch to include/exclude. Like:
+
+`--exclude patch1 patch2 patch3...`
+
+`--include patch4 patch5 patch6...`
 
 ➡ Use : get_patches_key "app-to-paches"
 

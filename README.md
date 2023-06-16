@@ -57,12 +57,13 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 `--exclude patch1 patch2 patch3...`
 
 `--include 
-patch4 
+patch4 `
 
-patch5 
+`patch5 `
 
-patch6...`
+`patch6...`
 
+still be OK
 
 ➡ Use : get_patches_key "app-to-paches"
 

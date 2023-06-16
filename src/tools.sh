@@ -69,7 +69,6 @@ function get_patches_key() {
     done
 }
 
-
 function req() {  
     wget -nv -O "$2" -U "Mozilla/5.0 (X11; Linux x86_64; rv:111.0) Gecko/20100101 Firefox/111.0" "$1" 
 } 

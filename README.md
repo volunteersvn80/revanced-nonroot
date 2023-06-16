@@ -63,7 +63,7 @@ patch4 `
 
 `patch6...`
 
-still be OK. If you not put --exclude or --include, default is exclude patches
+still be OK.
 
 ➡ Use : get_patches_key "app-to-paches"
 

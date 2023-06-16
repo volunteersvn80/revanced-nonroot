@@ -38,35 +38,38 @@ function dl_gh() {
 
 function get_patches_key() {
     local patch_file="$1"
-    file_content=($(cat patches/$patch_file))
+    mapfile -t lines < patches/$patch_file
     exclude_string=()
     include_string=()
-    exclude_patches=""
-    include_patches=""
-    section="exclude"
-    for line in "${file_content[@]}" ; do
-        if [[ $line == "--exclude" ]]; then
-            section="exclude"
-        elif [[ $line == "--include" ]]; then
-            section="include"
-        else
-            if [[ $section == "exclude" ]]; then
-                exclude_string+=("$line")
-            elif [[ $section == "include" ]]; then
-                include_string+=("$line")
+    flag=""
+    for line in "${lines[@]}"; do
+        if [[ $line == --exclude* ]]; then
+            flag="exclude"
+            exclude_string+=(${line#--exclude})
+        elif [[ $line == --include* ]]; then
+            flag="include"
+            include_string+=(${line#--include})
+        elif [[ -n $line && $line != --* ]]; then
+            if [[ $flag == "exclude" ]]; then
+                exclude_string+=($line)
+            elif [[ $flag == "include" ]]; then
+                include_string+=($line)
             fi
         fi
     done
+    exclude_patches=""
+    include_patches=""
     for patch in "${exclude_string[@]}" ; do
         exclude_patches+="--exclude $patch "
         if [[ " ${include_string[@]} " =~ " $patch " ]]; then
             printf "\033[0;31mPatch \"%s\" is specified both as exclude and include\033[0m\n" "$patch"
-            exit 1
+            return 1
         fi
     done
     for patch in "${include_string[@]}" ; do
         include_patches+="--include $patch "
     done
+    return 0
 }
 
 function req() {  

@@ -50,13 +50,19 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 2️⃣ Patch key words (skip if you no need in/exclude-patches) 
 
-➡ In folder patches creat new file app-to-patches
+➡ In folder patches creat new file app-to-patches begin by --exclude or --include 
 
-➡ Create patch to include/exclude. Like:
+➡ Create patch to include/exclude. Patches can be separated by a space or a newline. Like:
 
 `--exclude patch1 patch2 patch3...`
 
-`--include patch4 patch5 patch6...`
+`--include 
+patch4 
+
+patch5 
+
+patch6...`
+
 
 ➡ Use : get_patches_key "app-to-paches"
 

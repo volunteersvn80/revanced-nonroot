@@ -3,7 +3,7 @@
 source ./src/tools.sh
 
 # Check patch
-check_new_patch "inotia00" "revanced"
+check_new_patch "revanced" "revanced"
 
 #Download Revanced patches
 dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"

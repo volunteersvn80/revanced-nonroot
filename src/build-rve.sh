@@ -13,7 +13,7 @@ get_patches_key "youtube-revanced-extended"
 get_ver "youtube-rve"
 get_apkmirror "youtube"
 #get_uptodown "youtube"
-patch "youtube" "youtube-revanced-extended-arm" "arm"
+patch "youtube" "youtube-revanced-extended" 
 
 # Patch YouTube Music Extended 
 get_patches_key "youtube-music-revanced-extended"

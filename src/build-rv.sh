@@ -2,24 +2,8 @@
 # Revanced build
 source ./src/tools.sh
 
-release=$(curl -sL "https://api.github.com/repos/revanced/revanced-patches/releases/latest")
-asset=$(echo "$release" | jq -r '.assets[] | select(.name | test("revanced-patches.*\\.jar$")) | .browser_download_url')
-curl -sLO "$asset"
-
-ls revanced-patches*.jar >> new.txt
-rm -f revanced-patches*.jar
-
-release=$(curl -s "https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest")
-asset=$(echo "$release" | jq -r '.assets[] | select(.name == "revanced-version.txt") | .browser_download_url')
-curl -sLO "$asset"
-
-if diff -q revanced-version.txt new.txt >/dev/null ; then
-rm -f ./*.txt
-printf "\033[0;31mOld patch!!! Not build\033[0m\n"
-exit 0
-else
-printf "\033[0;32mBuild...\033[0m\n"
-rm -f ./*.txt
+# Check patch
+check_new_patch "inotia00" "revanced"
 
 #Download Revanced patches
 dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
@@ -64,8 +48,5 @@ get_apkmirror "youtube-music" "arm64-v8a"
 #get_uptodown "youtube-music"
 patch "youtube-music" "youtube-music-revanced"
 
-ls revanced-patches*.jar >> revanced-version.txt
-for file in ./*.jar ./*.apk ./*.json
-   do rm -f "$file"
-done
-fi
+# Finish patch
+finish_patch "revanced"

@@ -4,7 +4,7 @@ https://luxysiv.github.io/revanced-nonroot
 
 # Important note
 
-Some one ask me make function split 4 architectures but I think it not good for Downloaders. They must be check device's architecture. Universal APK is better. So some Apps on APKmirror only supported arch, I use Uptodown to take Universal APK. Thanks. Please read this before open issue. So if you want to split apk. Please read [this issue](https://github.com/luxysiv/revanced-nonroot/issues/9) to use this function.
+Some one ask me make function split 4 architectures but I think it not good for Downloaders. They must be check device's architecture. Universal APK is better. So some Apps on APKmirror only supported arch, I use Uptodown to take Universal APK. Please read this before open issue. So if you want to split apk. Please read [this issue](https://github.com/luxysiv/revanced-nonroot/issues/9) to use this function.Thanks for read
 
 # Credit
 

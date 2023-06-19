@@ -8,10 +8,6 @@ Code APKmirror: [revanced-build-template](https://github.com/n0k0m3/revanced-bui
 
 Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
 
-# Note
-
-🚫 I don't allow someone with a github name's Fioren to download and use my new code.  He/she was used my code but said: "I was created" and "my code"
-
 <div align="center">
 
 [![](https://visitcount.itsvg.in/api?id=luxysiv&label=Visitors&color=0&icon=0&pretty=true)](https://visitcount.itsvg.in)

@@ -2,6 +2,10 @@
 
 https://luxysiv.github.io/revanced-nonroot
 
+# Important note
+
+Some one ask me make function split 4 architectures but I think it not good for Downloaders. They must be check device's architecture. Universal APK is better. So some Apps on APKmirror only supported arch, I use Uptodown to take Universal APK. Thanks. Please read this before open issue. So if you want to split apk. Please read [this issue](https://github.com/luxysiv/revanced-nonroot/issues/9) to use this function.
+
 # Credit
 
 Code APKmirror: [revanced-build-template](https://github.com/n0k0m3/revanced-build-template)
@@ -112,8 +116,6 @@ get_uptodown "app_name"
 # Problem 
 
 Some apk download not exactly or not supported. Use between APKMirror and Uptodown
-
-Some one ask me make function split 4 architectures but I think it not good for Downloaders. They must be check device's architecture. Universal APK is better. So some Apps on APKmirror only supported arch, I use Uptodown to take Universal APK. Thanks. Please read this before open issue. So if you want to split apk. Please read [this issue](https://github.com/luxysiv/revanced-nonroot/issues/9) to use this function.
 
 # Download mMicroG patched hide-icon from inotia00 patch/source 
 

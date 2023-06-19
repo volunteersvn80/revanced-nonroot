@@ -38,7 +38,15 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 # Add new app or new source to patch
 
-1️⃣ Download source you need
+1️⃣ Check new patch release to build
+
+➡ Use check_patch "user" "txt_name"
+
+➡ (user = revanced,inotia00,kazimmt,kidatai31...)
+
+➡ (txt_name = revanced,revanced-extended...)
+
+2️⃣ Download source you need
 
 ➡ Use : dl_gh "user" "repo" tag" 
 
@@ -48,7 +56,7 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 
 ➡ (tag = latest or tags/v.... if you need specific patch version)
 
-2️⃣ Patch key words (skip if you no need in/exclude-patches) 
+3️⃣ Patch key words (skip if you no need in/exclude-patches) 
 
 ➡ In folder patches creat new file app-to-patches begin by --exclude or --include 
 
@@ -67,7 +75,7 @@ still be OK.
 
 ➡ Use : get_patches_key "app-to-paches"
 
-3️⃣ Get version apk supported 
+4️⃣ Get version apk supported 
 
 ➡ Use: get_ver "app_name" (Check in [version.info](./src/version.info) (Only revanced/inotia00 source)
 
@@ -75,7 +83,7 @@ still be OK.
 
 ➡ Use version="version" to set specific version 
 
-4️⃣ Get apk
+5️⃣ Get apk
 
 ➡ In new code I will input all app link revanced supported. Find them(app_name) in [apkmirror.info](./src/apkmirror.info) and [uptodown.info](./src/uptodown.info)
 
@@ -87,7 +95,7 @@ get_apkmirror "app_name" "arch" for arch app like : YouTube Music ,Messenger...
 
 get_uptodown "app_name"
 
-5️⃣ Patch app
+6️⃣ Patch app
 
 ➡ Use: patch "app_name" "name-you-like" "arch"
 
@@ -95,9 +103,17 @@ get_uptodown "app_name"
 
 ➡ (arch: arm64-v8a,armeabi-v7a,x86,x86_64 and arm) Split apk if you need. Note: blank is same original input APK. Need use j-hc/cli to split Revanced, Revanced Extended still use inotia00/cli
 
+7️⃣ Finish patch
+
+➡ Use : finish_patch "txt_name"
+
+➡ (txt_name = revanced,revanced-extended... As same 1️⃣)
+
 # Problem 
 
 Some apk download not exactly or not supported. Use between APKMirror and Uptodown
+
+Some one ask me make function split 4 architectures but I think it not good for Downloaders. They must be check device's architecture. Universal APK is better. So some Apps on APKmirror only supported arch, I use Uptodown to take Universal APK. Thanks. Please read this before open issue. So if you want to split apk. Please read [this issue](https://github.com/luxysiv/revanced-nonroot/issues/9) to use this function.
 
 # Download mMicroG patched hide-icon from inotia00 patch/source 
 

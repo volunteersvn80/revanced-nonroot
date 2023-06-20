@@ -50,3 +50,8 @@ patch "youtube-music" "youtube-music-revanced"
 
 # Finish patch
 finish_patch "revanced"
+
+# Split APK
+dl_gh "j-hc" "revanced-cli" "latest"
+dl_gh "revanced" "revanced-patches" "latest"
+split_apk "youtube-revanced"

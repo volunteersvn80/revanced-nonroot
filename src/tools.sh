@@ -282,7 +282,7 @@ function split_apk() {
     local cli_jar=$(find -name "revanced-cli*.jar" -print -quit)
     if [[ -z "$patches_jar" ]] || [[ -z "$cli_jar" ]]; then
         printf "\033[0;31mError: patches files not found\033[0m\n"
-        return 0
+        return 1 
     fi
     archs=("arm64-v8a" "armeabi-v7a" "x86" "x86_64")
     for arch in "${archs[@]}"; do

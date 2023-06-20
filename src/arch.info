@@ -1,1 +1,6 @@
-
+arches_to_split=(
+        "arm64_v8a"
+        "armeabi_v7a"
+        "x86"
+        "x86_64"
+)

@@ -52,6 +52,6 @@ patch "youtube-music" "youtube-music-revanced"
 finish_patch "revanced"
 
 # Split APK
-dl_gh "j-hc" "revanced-cli" "latest"
+dl_gh "inotia00" "revanced-cli" "latest"
 dl_gh "revanced" "revanced-patches" "latest"
 split_apk "youtube-revanced"

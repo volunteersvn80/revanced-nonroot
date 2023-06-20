@@ -11,7 +11,7 @@ function check_new_patch() {
     release=$(curl -sL "https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest")
     asset=$(echo "$release" | jq -r '.assets[] | select(.name == "'$txt_name'-version.txt") | .browser_download_url')
     curl -sLO "$asset"
-    if diff -q ${txt_name}-version.txt new.txt >/dev/null
+    if diff -q $txt_name-version.txt new.txt >/dev/null
         then
             rm -f ./*.txt
             printf "\033[0;31mOld patch!!! Not build\033[0m\n"
@@ -258,13 +258,7 @@ function patch() {
         fi
     fi
     printf "\033[0;32mPatch \033[0;31m\"%s\" \033[0;32mis finished!\033[0m\n" "$apk_out"
-    vars_to_unset=(
-        "version"
-        "exclude_patches"
-        "include_patches"
-        "exclude_string"
-        "include_string"
-    )
+    vars_to_unset=("version" "exclude_patches" "include_patches" "exclude_string" "include_string")
     for varname in "${vars_to_unset[@]}"; do
         if [[ -v "$varname" ]]; then
             unset "$varname"
@@ -286,7 +280,8 @@ function split_apk() {
     local apk_name=$1
     local patches_jar=$(find -name "revanced-patches*.jar" -print -quit)
     local cli_jar=$(find -name "revanced-cli*.jar" -print -quit)
-    for arch in "arm64-v8a" "armeabi-v7a" "x86" "x86_64" ; do
+    archs=("arm64-v8a" "armeabi-v7a" "x86" "x86_64")
+    for arch in "${archs[@]}"; do
         printf "\033[0;33mSplitting \033[0;31m\"%s\" \033[0;33m to \033[0;31m\"%s\" \033[0;33m\n" "$apk_name" "$apk_name-$arch"
         java -jar "$cli_jar" \
              --apk "build/$apk_name.apk" \

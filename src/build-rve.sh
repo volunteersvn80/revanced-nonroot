@@ -29,3 +29,8 @@ patch "microg" "mMicroG"
 
 # Finish patch
 finish_patch "revanced-extended"
+
+# Split APK
+dl_gh "j-hc" "revanced-cli" "latest"
+dl_gh "revanced" "revanced-patches" "latest"
+split_apk "youtube-revanced-extended"

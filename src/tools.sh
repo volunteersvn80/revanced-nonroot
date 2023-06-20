@@ -277,7 +277,7 @@ function finish_patch() {
 
 function split_apk() {
     source ./src/--rip-lib.info
-    source ./src/arch.info
+    source ./src/arches.info
     local apk_name=$1
     local patches_jar=$(find -name "revanced-patches*.jar" -print -quit)
     local cli_jar=$(find -name "revanced-cli*.jar" -print -quit)

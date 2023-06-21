@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
-  background-color: #000000;
+  background-color: #1C1C1C;
   color: #333;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,12 +14,11 @@
 }
 
 h1 {
-  background-image: url("https://i.imgur.com/MggKVQB.png"); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  height: 200px; 
-  color: #fff;
+  background-image: radial-gradient(white 10%, transparent 10%), radial-gradient(white 10%, transparent 10%);
+  background-color: pink;
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  color: #000;
   padding: 20px;
   margin: 0;
   text-align: center;
@@ -35,13 +34,13 @@ li {
    position :relative ;
    padding :15px ;
    margin-bottom :20px ; 
-   background-color :#000000 ;
+   background-color :#333333 ;
    border-radius :50px ;
    display :flex ;
    align-items :center ;
    justify-content :space-between ;
    overflow :hidden ;
-   border :3px solid #2196f3 ; 
+   border :3px solid #ff9900 ; 
    margin-left :3px ;
    margin-right :3px ;
    text-align:center; 
@@ -56,7 +55,7 @@ margin-right :20px ;
 }
 
 li button {
-background-color :#2196f3 ;
+background-color :#ff9900 ;
 color :#fff ;
 border :none ;
 padding :10px ;
@@ -65,7 +64,7 @@ cursor :pointer ;
 }
 
 li button:hover {
-background-color :#1976d2 ; 
+background-color :#cc6600 ; 
 border-radius :50px ;
 border :3px solid #FFFFF7 ; 
 }
@@ -74,6 +73,7 @@ border :3px solid #FFFFF7 ;
 li {
     font-size :14px ;
 }
+
 }
 p {
 color :#FFFFF7 ; 
@@ -82,7 +82,7 @@ text-align:center;
 }
 
 a {
-color :#2196f3 ;
+color :#ff9900 ;
 }
 
 .snowflake {
@@ -108,22 +108,16 @@ ul {
     margin-right:auto; 
 }
 }
-
-@media only screen and (max-width:600px) { 
-  h1 {
-    height: 100px; 
-    background-size: contain;
-  }
-}
-
 	</style>
 </head>
 <body>
-	<h1></h1>
+	<h1>Revanced & Revanced Extended</h1>
+<p> YouTube splitted 4 architectures </p>
 <p>mMicroG is necessary in order for YouTube & YouTube Music to work. Install it first!!!</p>
 <p>Checkout my github repository <a href="https://github.com/luxysiv/revanced-nonroot/">here</a></p>
 	<ul id="release-list"></ul>
         <script>
+
 fetch("https://api.github.com/repos/luxysiv/revanced-nonroot/releases/latest")
     .then(response => response.json())
     .then(data => {
@@ -134,7 +128,7 @@ fetch("https://api.github.com/repos/luxysiv/revanced-nonroot/releases/latest")
                 const listItem = document.createElement("li");
                 const link = document.createElement("a");
                 link.textContent = asset.name;
-                
+
                 const size = document.createElement("span");
                 size.textContent = ` (${(asset.size /1024 /1024).toFixed(2)} MB)`;
                 size.style.color = "white";

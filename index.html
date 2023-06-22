@@ -125,19 +125,6 @@ ul {
 }
 }
 	</style>
-	<script>
-  var h1 = document.querySelector("h1");
-  function createStars() {
-    for (var i = 0; i < 100; i++) {
-      var star = document.createElement("div");
-      star.classList.add("star");
-      star.style.left = Math.random() * h1.offsetWidth + "px";
-      star.style.top = Math.random() * h1.offsetHeight + "px";
-      h1.appendChild(star);
-    }
-  }
-  createStars();
-</script>
 </head>
 <body>
 	<h1>Revanced & Revanced Extended</h1>
@@ -196,6 +183,17 @@ fetch("https://api.github.com/repos/luxysiv/revanced-nonroot/releases/latest")
     for (let i = 0; i < 100; i++) {
         createSnowflake();
     }
+    var h1 = document.querySelector("h1");
+  function createStars() {
+    for (var i = 0; i < 100; i++) {
+      var star = document.createElement("div");
+      star.classList.add("star");
+      star.style.left = Math.random() * h1.offsetWidth + "px";
+      star.style.top = Math.random() * h1.offsetHeight + "px";
+      h1.appendChild(star);
+    }
+  }
+  createStars();
 	</script>
 	<p style="font-weight: bold; font-style: italic; color: red; text-align: center;">Author: <a href="https://github.com/luxysiv">Luxysiv</a></p>
 </body>

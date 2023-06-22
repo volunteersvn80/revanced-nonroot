@@ -113,11 +113,11 @@ ul {
 <body>
 	<h1>Revanced & Revanced Extended</h1>
 <p>mMicroG is necessary in order for YouTube & YouTube Music to work. Install it first!!!</p>
-<p>Checkout my github repository <a href="https://github.com/$GITHUB_REPOSITORY/">here</a></p>
+<p>Checkout my github repository <a href="https://github.com/luxysiv/revanced-nonroot/">here</a></p>
 	<ul id="release-list"></ul>
         <script>
 
-fetch("https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest")
+fetch("https://api.github.com/repos/luxysiv/revanced-nonroot/releases/latest")
     .then(response => response.json())
     .then(data => {
         const releaseList = document.getElementById("release-list");

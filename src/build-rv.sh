@@ -43,8 +43,8 @@ patch "youtube" "youtube-revanced"
 
 # Patch YouTube Music 
 get_patches_key "youtube-music-revanced"
-get_apkmirror "youtube-music" "arm64-v8a"
-#get_uptodown "youtube-music"
+#get_apkmirror "youtube-music" "arm64-v8a"
+get_uptodown "youtube-music"
 patch "youtube-music" "youtube-music-revanced"
 
 # Finish patch

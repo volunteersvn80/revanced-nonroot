@@ -8,6 +8,9 @@ check_new_patch "revanced" "revanced"
 #Download Revanced patches
 dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 
+# Use v$version to take apk with version
+# Example: patch "reddit" "reddit-revanced-v$version"
+
 # Reddit
 get_patches_key "reddit"
 get_apkmirror "reddit"

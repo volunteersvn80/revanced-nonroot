@@ -33,20 +33,20 @@ li {
    position :relative ;
    padding :15px ;
    margin-bottom :20px ; 
-   background-color :#333333 ;
-   border-radius :50px ;
+   background-color : #333333 ;
+   border-radius :15px ;
    display :flex ;
    align-items :center ;
    justify-content :space-between ;
    overflow :hidden ;
-   border :3px solid #ff9900 ; 
-   margin-left :3px ;
-   margin-right :3px ;
+   border :1px solid violet ; 
+   margin-left :1px ;
+   margin-right :1px ;
    text-align:center; 
 }
 
 li a {
-color :#FFFFF7 ;
+color :lightyellow ;
 text-decoration :none ;
 font-weight :bold ;
 flex-grow :1 ;
@@ -54,18 +54,17 @@ margin-right :20px ;
 }
 
 li button {
-background-color :#ff9900 ;
-color :#fff ;
+background-color :violet ;
 border :none ;
 padding :10px ;
-border-radius :50px ;
+border-radius :15px ;
 cursor :pointer ;
 }
 
 li button:hover {
-background-color :#cc6600 ; 
-border-radius :50px ;
-border :3px solid #FFFFF7 ; 
+background-color :violet ; 
+border-radius :15px ;
+border :3px solid purple ; 
 }
 
 @media only screen and (max-width :600px) {
@@ -81,7 +80,7 @@ text-align:center;
 }
 
 a {
-color :#ff9900 ;
+color :violet ;
 }
 
 .snowflake {
@@ -95,9 +94,9 @@ color :#ff9900 ;
     animation-play-state:running,running
 }
   .star {
-    width: 2px;
-    height: 2px;
-    background-color: white;
+    width: 3px;
+    height: 3px;
+    background-color: lightcyan;
     border-radius: 50%;
     position: absolute; 
     animation: twinkle 5s infinite; 
@@ -142,13 +141,14 @@ fetch("https://api.github.com/repos/luxysiv/revanced-nonroot/releases/latest")
 
                 const size = document.createElement("span");
                 size.textContent = ` (${(asset.size /1024 /1024).toFixed(2)} MB)`;
-                size.style.color = "white";
+                size.style.color = "lightyellow";
                 size.style.fontSize = "14px";
                 size.style.position = "relative";
                 size.style.left = "-10px";
 
                 const downloadButton = document.createElement("button");
                 downloadButton.textContent = "Download";
+                downloadButton.style.color ="black";
                 downloadButton.addEventListener("click", () => {
                     window.location.href = asset.browser_download_url;
                 });
@@ -191,6 +191,6 @@ fetch("https://api.github.com/repos/luxysiv/revanced-nonroot/releases/latest")
     }
     createStars();
 	</script>
-	<p style="font-weight: bold; font-style: italic; color: red; text-align: center;">Author: <a href="https://github.com/luxysiv">Luxysiv</a></p>
+	<p style="font-weight: bold; font-style: italic; color: violet; text-align: center;">Author: <a href="https://github.com/luxysiv">Luxysiv</a></p>
 </body>
 </html>

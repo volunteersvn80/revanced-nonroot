@@ -23,7 +23,7 @@ declare -A apps=(
   # Spotify Lite
   ["spotify-lite"]='{"app_link":"https://spotify-lite.en.uptodown.com/android"}'
   # Inshorts - News in 60 words
-  ["inshorts"]='{"app_link":"https://inshorts.en.uptodown.com/android"}'  
+  ["inshorts"]='{"app_link":"https://inshorts.en.uptodown.com/android"}' 
   # Backdrops Wallpapers 
   ["backdrops"]='{"app_link":"https://backdrops.en.uptodown.com/android"}' 
   # WarnWetter 
@@ -46,8 +46,9 @@ declare -A apps=(
   ["meme-generator"]='{"app_link":"https://meme-generator-free.en.uptodown.com/android"}'
   # My expenses
   ["expenses"]='{"app_link":"https://my-expenses.en.uptodown.com/android"}' 
-  # VSCO
   ["vsco"]='{"app_link":"https://vsco-cam.en.uptodown.com/android"}' 
   # Ticktick to do list
   ["ticktick"]='{"app_link":"https://ticktick.en.uptodown.com/android"}' 
+  # Relay for Reddit 
+  ["relay"]='{"app_link":"https://relay.en.uptodown.com/android"}'
 )

@@ -1,5 +1,7 @@
 # 👉 [Download page](https://luxysiv.github.io/revanced-nonroot)
 
+# [Smaller Revanced Extended APK](https://manhduonghn.github.io/revanced-extended/)
+
 # Note
 
 I make function split apk to 4 architectures. In this repository, only split YouTube to example. Use inotia00(j-hc)/revanced-cli to do it 

@@ -1,4 +1,4 @@
-# [Download page](https://luxysiv.github.io/revanced-nonroot)
+# 👉 [Download page](https://luxysiv.github.io/revanced-nonroot)
 
 # Note
 

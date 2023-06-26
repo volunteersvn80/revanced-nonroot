@@ -1,6 +1,4 @@
-# Download page 
-
-https://luxysiv.github.io/revanced-nonroot
+# [Download page](https://luxysiv.github.io/revanced-nonroot)
 
 # Note
 
@@ -117,17 +115,6 @@ get_uptodown "app_name"
 
 Some apk download not exactly or not supported. Use between APKMirror and Uptodown
 
-# Download mMicroG patched hide-icon from inotia00 patch/source 
-
-<div align="center">
-
-[![Release](https://img.shields.io/github/v/release/inotia00/mMicroG?label=mMicroG)](https://github.com/luxysiv/revanced-nonroot/releases/latest/download/mMicroG.apk)
-
-👆 to download mMicroG
-
-Necessary for non-root users. Install first
-  
-</div>
 
 # About
 This repository can patch YouTube/YouTube Music from revanced/inotia00 source

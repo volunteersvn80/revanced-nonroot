@@ -1,6 +1,4 @@
-# 👉 [Download page](https://luxysiv.github.io/revanced-nonroot)
-
-# [Smaller Revanced Extended APK](https://manhduonghn.github.io/revanced-extended/)
+# 👉 [Download page](https://luxysiv.github.io/revanced)
 
 # Note
 

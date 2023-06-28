@@ -15,40 +15,40 @@ dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 get_patches_key "reddit"
 get_apkmirror "reddit"
 #get_uptodown "reddit"
-patch "reddit" "reddit-revanced"
+patch "reddit" "reddit-revanced-v$version"
 
 # Messenger
 get_patches_key "messenger"
 #get_apkmirror "messenger" "arm64-v8a"
 get_uptodown "messenger"
-patch "messenger" "messenger-revanced"
+patch "messenger" "messenger-revanced-v$version"
 
 # Patch Twitch 
 get_patches_key "twitch"
 get_ver "twitch"
 get_apkmirror "twitch"
 #get_uptodown "twitch"
-patch "twitch" "twitch-revanced"
+patch "twitch" "twitch-revanced-v$version"
 
 # Patch Tiktok Asia or Global. Keyword patch is the same get Apk
 get_patches_key "tiktok"
 #get_apkmirror "tiktok"
 get_uptodown "tiktok-asia"
 #get_uptodown "tiktok-global
-patch "tiktok-asia" "tiktok-asia-revanced"
+patch "tiktok-asia" "tiktok-asia-revanced-v$version"
 
 # Patch YouTube 
 get_patches_key "youtube-revanced"
 get_ver "youtube-rv"
 get_apkmirror "youtube"
 #get_uptodown "youtube"
-patch "youtube" "youtube-revanced"
+patch "youtube" "youtube-revanced-v$version"
 
 # Patch YouTube Music 
 get_patches_key "youtube-music-revanced"
 #get_apkmirror "youtube-music" "arm64-v8a"
 get_uptodown "youtube-music"
-patch "youtube-music" "youtube-music-revanced"
+patch "youtube-music" "youtube-music-revanced-v$version"
 
 # Finish patch
 finish_patch "revanced"

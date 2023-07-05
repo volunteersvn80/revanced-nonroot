@@ -22,6 +22,12 @@ version="6.04.53"
 get_uptodown "youtube-music" 
 patch "youtube-music" "youtube-music-revanced-extended-v$version"
 
+#Reddit
+get_patches_key "reddit"
+get_apkmirror "reddit"
+#get_uptodown "reddit"
+patch "reddit" "reddit-revanced-extended-v$version"
+
 # Patch microG
 get_patches_key "mMicroG"
 dl_gh "inotia00" "mMicroG" "latest"

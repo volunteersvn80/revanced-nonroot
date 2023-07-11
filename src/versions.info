@@ -5,7 +5,7 @@ declare -A versions=(
   # Youtube Revanced Extended 
   ["youtube-rve"]='{"patch":"hide-general-ads","package":"com.google.android.youtube"}'
   # Twitch 
-  ["twitch"]='{"patch":"block-video-ads","package":"tv.twitch.android.app"}'
+  ["twitch"]='{"patch":"Block video ads","package":"tv.twitch.android.app"}'
   # Twitter 
   ["twitter"]='{"patch":"hide-views-stats","package":"com.twitter.android"}'
   # Backdrops Wallpapers

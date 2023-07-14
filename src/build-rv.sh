@@ -14,9 +14,9 @@ dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 # Twitter
 get_patches_key "twitter"
 get_ver "twitter"
-get_apkmirror "twitter"
-#get_uptodown "twitter"
-patch "twitter" "twitter-revanced-$version"
+#get_apkmirror "twitter"
+get_uptodown "twitter"
+patch "twitter" "twitter-revanced-v$version"
 
 # Reddit
 #get_patches_key "reddit"

@@ -51,6 +51,4 @@ declare -A apps=(
   ["ticktick"]='{"app_link":"https://ticktick.en.uptodown.com/android"}' 
   # Relay for Reddit 
   ["relay"]='{"app_link":"https://relay.en.uptodown.com/android"}'
-  # Twitter 
-  ["twitter"]='{"app_link":"https://twitter.uptodown.com/android"}'
 )

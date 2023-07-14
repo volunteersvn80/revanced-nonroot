@@ -12,7 +12,7 @@ dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 # Example: patch "reddit" "reddit-revanced-v$version"
 
 # Twitter
-get_patch_key "twitter"
+get_patches_key "twitter"
 get_ver "twitter"
 get_apkmirror "twitter"
 #get_uptodown "twitter"

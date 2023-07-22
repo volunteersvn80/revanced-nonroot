@@ -6,8 +6,6 @@ declare -A versions=(
   ["youtube-rve"]='{"patch":"Hide general ads","package":"com.google.android.youtube"}'
   # Twitch 
   ["twitch"]='{"patch":"Block video ads","package":"tv.twitch.android.app"}'
-  # Twitter 
-  ["twitter"]='{"patch":"Hide views stats","package":"com.twitter.android"}'
   # Backdrops Wallpapers
   ["backdrops"]='{"patch":"Pro unlock","package":"com.backdrops.wallpapers"}'
   # Meme Generator 

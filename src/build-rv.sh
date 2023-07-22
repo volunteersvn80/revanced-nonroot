@@ -13,7 +13,6 @@ dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 
 # Twitter
 get_patches_key "twitter"
-get_ver "twitter"
 get_apkmirror "twitter"
 patch "twitter" "twitter-revanced-v$version"
 
@@ -38,7 +37,6 @@ patch "twitch" "twitch-revanced-v$version"
 
 # Patch Tiktok Asia or Global. Keyword patch is the same get Apk
 get_patches_key "tiktok"
-version="30.4.5"
 get_apkmirror "tiktok"
 #get_uptodown "tiktok-asia"
 #get_uptodown "tiktok-global

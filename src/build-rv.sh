@@ -13,6 +13,7 @@ dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 
 # Twitter
 get_patches_key "twitter"
+version="9.98.0-release0"
 get_apkmirror "twitter"
 patch "twitter" "twitter-revanced-v$version"
 

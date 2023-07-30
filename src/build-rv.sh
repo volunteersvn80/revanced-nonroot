@@ -8,6 +8,9 @@ check_new_patch "revanced" "revanced"
 #Download Revanced patches
 dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 
+# Download HTMLQ 
+dl_htmlq
+
 # Use v$version to take apk with version
 # Example: patch "reddit" "reddit-revanced-v$version"
 

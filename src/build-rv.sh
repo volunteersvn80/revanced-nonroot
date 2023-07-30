@@ -12,15 +12,15 @@ dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
 # Example: patch "reddit" "reddit-revanced-v$version"
 
 # Twitter
-get_patches_key "twitter"
-version="9.98.0-release.0"
-get_apkmirror "twitter"
-patch "twitter" "twitter-revanced-v$version"
+#get_patches_key "twitter"
+#version="9.98.0-release.0"
+#get_apkmirror "twitter"
+#patch "twitter" "twitter-revanced-v$version"
 
 # Reddit
 get_patches_key "reddit"
-get_apkmirror "reddit"
-#get_uptodown "reddit"
+#get_apkmirror "reddit"
+get_uptodown "reddit"
 patch "reddit" "reddit-revanced-v$version"
 
 # Messenger
@@ -32,22 +32,22 @@ patch "messenger" "messenger-revanced-v$version"
 # Patch Twitch 
 get_patches_key "twitch"
 get_ver "twitch"
-get_apkmirror "twitch"
-#get_uptodown "twitch"
+#get_apkmirror "twitch"
+get_uptodown "twitch"
 patch "twitch" "twitch-revanced-v$version"
 
 # Patch Tiktok Asia or Global. Keyword patch is the same get Apk
 get_patches_key "tiktok"
-get_apkmirror "tiktok"
-#get_uptodown "tiktok-asia"
+#get_apkmirror "tiktok"
+get_uptodown "tiktok-asia"
 #get_uptodown "tiktok-global
-patch "tiktok" "tiktok-revanced-v$version"
+patch "tiktok-asia" "tiktok-asia-revanced-v$version"
 
 # Patch YouTube 
 get_patches_key "youtube-revanced"
 get_ver "youtube-rv"
-get_apkmirror "youtube"
-#get_uptodown "youtube"
+#get_apkmirror "youtube"
+get_uptodown "youtube"
 patch "youtube" "youtube-revanced-v$version"
 
 # Patch YouTube Music 

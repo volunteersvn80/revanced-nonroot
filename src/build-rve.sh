@@ -11,20 +11,17 @@ dl_gh "inotia00" "revanced-patches revanced-cli revanced-integrations" "latest"
 # Patch YouTube Extended
 get_patches_key "youtube-revanced-extended"
 get_ver "youtube-rve"
-#get_apkmirror "youtube"
-get_uptodown "youtube"
+get_apkmirror "youtube"
 patch "youtube" "youtube-revanced-extended-v$version" 
 
 # Patch YouTube Music Extended 
 get_patches_key "youtube-music-revanced-extended"
-#get_apkmirror "youtube-music" "arm64-v8a"
-get_uptodown "youtube-music" 
+get_apkmirror "youtube-music" "arm64-v8a"
 patch "youtube-music" "youtube-music-revanced-extended-v$version"
 
 #Reddit
 get_patches_key "reddit"
-#get_apkmirror "reddit"
-get_uptodown "reddit"
+get_apkmirror "reddit"
 patch "reddit" "reddit-revanced-extended-v$version"
 
 # Patch microG

@@ -8,6 +8,9 @@ check_new_patch "inotia00" "revanced-extended"
 #Download Revanced Extended patches 
 dl_gh "inotia00" "revanced-patches revanced-cli revanced-integrations" "latest"
 
+# Download HTMLQ 
+dl_htmlq
+
 # Patch YouTube Extended
 get_patches_key "youtube-revanced-extended"
 get_ver "youtube-rve"

@@ -33,7 +33,7 @@ get_ver "twitch"
 get_apkmirror "twitch"
 patch "twitch" "twitch-revanced-v$version"
 
-# Patch Tiktok Asia or Global. Keyword patch is the same get Apk
+# Patch Tiktok
 get_patches_key "tiktok"
 get_apkmirror "tiktok"
 patch "tiktok" "tiktok-revanced-v$version"

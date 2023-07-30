@@ -82,14 +82,14 @@ function get_patches_key() {
         fi
     done
     for patch in "${exclude_string[@]}" ; do
-        exclude_patches+="--exclude $patch "
+        exclude_patches+="-e $patch "
         if [[ " ${include_string[@]} " =~ " $patch " ]]; then
             printf "\033[0;31mPatch \"%s\" is specified both as exclude and include\033[0m\n" "$patch"
             return 1
         fi
     done
     for patch in "${include_string[@]}" ; do
-        include_patches+="--include $patch "
+        include_patches+="-i $patch "
     done
     return 0
 }
@@ -234,27 +234,27 @@ function patch() {
     if [[ -z "$arch" ]]; then
         shift
         java -jar "$cli_jar" \
-             --apk "$base_apk" \
-             --bundle "$patches_jar" \
-             --merge "$integrations_apk" \
+             -a "$base_apk" \
+             -b "$patches_jar" \
+             -m "$integrations_apk" \
              ${exclude_patches} \
              ${include_patches} \
-             --keystore ./src/ks.keystore \
-             --out "build/$apk_out.apk"
+             --keystore=./src/ks.keystore \
+             -o "build/$apk_out.apk"
     else
         if [[ ! ${arch_map[$arch]+_} ]]; then
             printf "\033[0;31mError: invalid split arch value\033[0m\n"
             exit 1
         else
             java -jar "$cli_jar" \
-                 --apk "$base_apk" \
-                 --bundle "$patches_jar" \
-                 --merge "$integrations_apk" \
+                 -a "$base_apk" \
+                 -b "$patches_jar" \
+                 -m "$integrations_apk" \
                  ${exclude_patches} \
                  ${include_patches} \
                  ${arch_map[$arch]} \
                  --keystore ./src/ks.keystore \
-                 --out "build/$apk_out-$arch.apk"
+                 -o "build/$apk_out-$arch.apk"
         fi
     fi
     printf "\033[0;32mPatch \033[0;31m\"%s\" \033[0;32mis finished!\033[0m\n" "$apk_out"
@@ -293,11 +293,11 @@ function split_apk() {
     for arch in "${archs[@]}"; do
         printf "\033[0;33mSplitting \033[0;31m\"%s\" \033[0;33m to \033[0;31m\"%s\" \033[0;33m\n" "$apk_name" "$apk_name-$arch"
         java -jar "$cli_jar" \
-             --apk "$base_apk" \
-             --bundle "$patches_jar" \
+             -a "$base_apk" \
+             -b "$patches_jar" \
              ${arch_map[$arch]} \
              --keystore ./src/ks.keystore \
-             --out "build/$apk_name-$arch.apk"
+             -o "build/$apk_name-$arch.apk"
         printf "\033[0;32mSplit \033[0;31m\"%s\" \033[0;32m is finished.\033[0m\n" "$apk_name-$arch"
     done
 }

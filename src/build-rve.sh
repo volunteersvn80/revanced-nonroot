@@ -1,65 +1,40 @@
 #!/bin/bash
-# Revanced build
+# Revanced Extended build
 source ./src/tools.sh
 
 # Check patch
-check_new_patch "revanced" "revanced"
+check_new_patch "inotia00" "revanced-extended"
 
-#Download Revanced patches
-dl_gh "revanced" "revanced-patches revanced-cli revanced-integrations" "latest"
+#Download Revanced Extended patches 
+dl_gh "inotia00" "revanced-patches revanced-cli revanced-integrations" "latest"
 
-# Use v$version to take apk with version
-# Example: patch "reddit" "reddit-revanced-v$version"
+# Patch YouTube Extended
+get_patches_key "youtube-revanced-extended"
+get_ver "youtube-rve"
+get_apkmirror "youtube"
+#get_uptodown "youtube"
+patch "youtube" "youtube-revanced-extended-v$version" 
 
-# Twitter
-get_patches_key "twitter"
-version="9.98.0-release.0"
-get_apkmirror "twitter"
-patch "twitter" "twitter-revanced-v$version"
+# Patch YouTube Music Extended 
+get_patches_key "youtube-music-revanced-extended"
+#get_apkmirror "youtube-music" "arm64-v8a"
+get_uptodown "youtube-music" 
+patch "youtube-music" "youtube-music-revanced-extended-v$version"
 
-# Reddit
+#Reddit
 get_patches_key "reddit"
 get_apkmirror "reddit"
 #get_uptodown "reddit"
-patch "reddit" "reddit-revanced-v$version"
+patch "reddit" "reddit-revanced-extended-v$version"
 
-# Messenger
-get_patches_key "messenger"
-#get_apkmirror "messenger" "arm64-v8a"
-get_uptodown "messenger"
-patch "messenger" "messenger-revanced-v$version"
-
-# Patch Twitch 
-get_patches_key "twitch"
-get_ver "twitch"
-get_apkmirror "twitch"
-#get_uptodown "twitch"
-patch "twitch" "twitch-revanced-v$version"
-
-# Patch Tiktok Asia or Global. Keyword patch is the same get Apk
-get_patches_key "tiktok"
-get_apkmirror "tiktok"
-#get_uptodown "tiktok-asia"
-#get_uptodown "tiktok-global
-patch "tiktok" "tiktok-revanced-v$version"
-
-# Patch YouTube 
-get_patches_key "youtube-revanced"
-get_ver "youtube-rv"
-get_apkmirror "youtube"
-#get_uptodown "youtube"
-patch "youtube" "youtube-revanced-v$version"
-
-# Patch YouTube Music 
-get_patches_key "youtube-music-revanced"
-#get_apkmirror "youtube-music" "arm64-v8a"
-get_uptodown "youtube-music"
-patch "youtube-music" "youtube-music-revanced-v$version"
+# Patch microG
+get_patches_key "mMicroG"
+dl_gh "inotia00" "mMicroG" "latest"
+patch "microg" "mMicroG"
 
 # Finish patch
-finish_patch "revanced"
+finish_patch "revanced-extended"
 
 # Split APK
-#dl_gh "inotia00" "revanced-cli" "latest"
-#dl_gh "revanced" "revanced-patches" "latest"
-#split_apk "youtube-revanced"
+#dl_gh "inotia00" "revanced-patches revanced-cli" "latest"
+#split_apk "youtube-revanced-extended"

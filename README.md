@@ -6,9 +6,7 @@ I make function split apk to 4 architectures. In this repository, only split You
 
 # Credit
 
-Code APKmirror: [revanced-build-template](https://github.com/n0k0m3/revanced-build-template)
-
-Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
+Code APKmirror: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
 
 <div align="center">
 
@@ -29,8 +27,6 @@ Code Uptodown: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-
 [Revanced Extended](https://github.com/inotia00/revanced-patches/releases)
 
 ✅ In [build-rv.sh](./src/build-rv.sh) [build-rve.sh](./src/build-rve.sh) 
-
-✒️ Change apk source to down : APKmirror or Uptodown 
 
 ✒️ Add keyword to patch others app 
 
@@ -87,15 +83,13 @@ still be OK.
 
 5️⃣ Get apk
 
-➡ In new code I will input all app link revanced supported. Find them(app_name) in [apkmirror.info](./src/apkmirror.info) and [uptodown.info](./src/uptodown.info)
+➡ In new code I will input all app-links revanced supported. Find them(app_name) in [apkmirror.info](./src/apkmirror.info)
 
 ➡ Use : 
 
 get_apkmirror "app_name" for universal app like :YouTube,Twitch...
          
 get_apkmirror "app_name" "arch" for arch app like : YouTube Music ,Messenger...
-
-get_uptodown "app_name"
 
 6️⃣ Patch app
 
@@ -110,11 +104,6 @@ get_uptodown "app_name"
 ➡ Use : finish_patch "txt_name"
 
 ➡ (txt_name = revanced,revanced-extended... As same 1️⃣)
-
-# Problem 
-
-Some apk download not exactly or not supported. Use between APKMirror and Uptodown
-
 
 # About
 This repository can patch YouTube/YouTube Music from revanced/inotia00 source

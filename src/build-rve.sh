@@ -6,7 +6,8 @@ source ./src/tools.sh
 check_new_patch "inotia00" "revanced-extended"
 
 #Download Revanced Extended patches 
-dl_gh "inotia00" "revanced-patches revanced-cli revanced-integrations" "latest"
+dl_gh "inotia00" "revanced-patches revanced-integrations" "latest"
+dl_gh "j-hc" "revanced-cli" "latest"
 
 # Patch YouTube Extended
 get_patches_key "youtube-revanced-extended"

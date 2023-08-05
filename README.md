@@ -1,3 +1,5 @@
+# Because Revanced Extended drop so I will drop this repository 
+
 # 👉 [Download page](https://luxysiv.github.io/revanced)
 
 # Note

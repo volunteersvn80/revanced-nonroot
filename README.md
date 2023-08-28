@@ -8,6 +8,8 @@ From now on, this repository only patch YouTube Revanced with
 
 * Default patches
 
+* Auto check new patch
+
 # Download page
 
 https://luxysiv.github.io/revanced/

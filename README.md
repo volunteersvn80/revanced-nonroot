@@ -1,112 +1,13 @@
-# Because Revanced Extended drop so I will drop this repository 
-
-# 👉 [Download page](https://luxysiv.github.io/revanced)
-
 # Note
 
-I make function split apk to 4 architectures. In this repository, only split YouTube to example. Use inotia00(j-hc)/revanced-cli to do it 
+From now on, this repository only patch YouTube Revanced with 
 
-# Credit
+* Original logo
 
-Code APKmirror: [revanced-magisk-module](https://github.com/j-hc/revanced-magisk-module)
+* Original name
 
-<div align="center">
+* Default patches
 
-[![](https://visitcount.itsvg.in/api?id=luxysiv&label=Visitors&color=0&icon=0&pretty=true)](https://visitcount.itsvg.in)
-  
-</div>
-  
-# How to use
+# Download page
 
-✅ Fork this repository 
-
-✅ Enable github actions
-
-✅ Config your patches in folder 
-
-[Revanced](https://github.com/revanced/revanced-patches/releases)
-
-[Revanced Extended](https://github.com/inotia00/revanced-patches/releases)
-
-✅ In [build-rv.sh](./src/build-rv.sh) [build-rve.sh](./src/build-rve.sh) 
-
-✒️ Add keyword to patch others app 
-
-✅ Run github actions and wait
-
-✅ Take apk in releases
-
-# Add new app or new source to patch
-
-1️⃣ Check new patch release to build
-
-➡ Use check_patch "user" "txt_name"
-
-➡ (user = revanced,inotia00,kazimmt,kidatai31...)
-
-➡ (txt_name = revanced,revanced-extended...)
-
-2️⃣ Download source you need
-
-➡ Use : dl_gh "user" "repo" tag" 
-
-➡ (user = revanced,inotia00,kazimmt,kidatai31...) 
-
-➡ (repo = revanced-patches revanced-cli revanced-integrations) You can use j-hc/revanced-cli to --riplib)
-
-➡ (tag = latest or tags/v.... if you need specific patch version)
-
-3️⃣ Patch key words (skip if you no need in/exclude-patches) 
-
-➡ In folder patches creat new file app-to-patches begin by --exclude or --include 
-
-➡ Create patch to include/exclude. Patches can be separated by a space or a newline. Like:
-
-`--exclude patch1 patch2 patch3...`
-
-`--include 
-patch4 `
-
-`patch5 `
-
-`patch6...`
-
-still be OK.
-
-➡ Use : get_patches_key "app-to-paches"
-
-4️⃣ Get version apk supported 
-
-➡ Use: get_ver "app_name" (Check in [version.info](./src/version.info) (Only revanced/inotia00 source)
-
-➡ Skip this if not found or use get_ver "patch_name" "pkg_name" for different revanced/inotia00 source
-
-➡ Use version="version" to set specific version 
-
-5️⃣ Get apk
-
-➡ In new code I will input all app-links revanced supported. Find them(app_name) in [apkmirror.info](./src/apkmirror.info)
-
-➡ Use : 
-
-get_apkmirror "app_name" for universal app like :YouTube,Twitch...
-         
-get_apkmirror "app_name" "arch" for arch app like : YouTube Music ,Messenger...
-
-6️⃣ Patch app
-
-➡ Use: patch "app_name" "name-you-like" "arch"
-
-➡ (app_name: above) (name-you-like: Example YouTube-Extended-v$version)
-
-➡ (arch: arm64-v8a,armeabi-v7a,x86,x86_64 and arm) Split apk if you need. Note: blank is same original input APK. Need use j-hc/cli to split Revanced, Revanced Extended still use inotia00/cli
-
-7️⃣ Finish patch
-
-➡ Use : finish_patch "txt_name"
-
-➡ (txt_name = revanced,revanced-extended... As same 1️⃣)
-
-# About
-This repository can patch YouTube/YouTube Music from revanced/inotia00 source
-
+https://luxysiv.github.io/revanced/

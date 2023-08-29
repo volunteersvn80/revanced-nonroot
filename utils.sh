@@ -36,11 +36,14 @@ get_version() {
 
 # Function Patch APK
 patch_ytrv() {
-echo "Patching YouTube..."
-java -jar revanced-cli*.jar patch \
-     -m revanced-integrations*.apk \
-     -b revanced-patches*.jar \
-     youtube-v$version.apk \
-     --keystore=ks.keystore \
-     -o youtube-revanced-v$version.apk
+    dl_gh
+    get_version
+    dl_yt "$version" "youtube.apk"
+    echo "Patching YouTube..."
+    java -jar revanced-cli*.jar patch \
+         -m revanced-integrations*.apk \
+         -b revanced-patches*.jar \
+         youtube-v$version.apk \
+         --keystore=ks.keystore \
+         -o youtube-revanced-v$version.apk
 }

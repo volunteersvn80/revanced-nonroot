@@ -11,9 +11,6 @@ current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 response1=$(curl -s -o /dev/null -w "%{http_code}" "https://api.github.com/repos/$repo1/releases/latest")
 if [[ $response1 -eq 404 ]]; then
     # No latest release, build the app
-    dl_gh
-    get_version
-    dl_yt $version youtube-v$version.apk
     patch_ytrv
 else
     # There is a latest release, check the release status of repo2
@@ -36,9 +33,6 @@ else
             if [[ $difference -le $time_threshold ]]; then
                 # The asset is published within the time threshold, build the app
                 dl_gh
-                get_version
-                dl_yt $version youtube-v$version.apk
-                patch_ytrv
             else
                 # The asset is too old, skip the app
                 echo "Skipping patch YouTube because the asset of $repo2 is older than $time_threshold hour(s)"

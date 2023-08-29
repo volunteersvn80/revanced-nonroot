@@ -36,9 +36,6 @@ get_version() {
 
 # Function Patch APK
 patch_ytrv() {
-    dl_gh
-    get_version
-    dl_yt "$version" "youtube.apk"
     echo "Patching YouTube..."
     java -jar revanced-cli*.jar patch \
          -m revanced-integrations*.apk \

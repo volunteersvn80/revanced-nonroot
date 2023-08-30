@@ -32,7 +32,7 @@ dl_yt() {
 get_version() {
   version=""
   versions=$(jq -r '.[].compatiblePackages[] | select(.name == "com.google.android.youtube") | .versions[]' patches.json)
-  for ver in $versions; do
+  for version in $versions; do
     if [[ $version == null ]]; then
       continue
     fi

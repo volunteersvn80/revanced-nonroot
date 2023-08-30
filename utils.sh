@@ -29,8 +29,8 @@ dl_yt() {
     if [ ! -f $2 ]; then echo failed && exit 1; fi
 }
 
+# Get highest supported version 
 get_version() {
-  version=""
   versions=$(jq -r '.[].compatiblePackages[] | select(.name == "com.google.android.youtube") | .versions[]' patches.json)
   for version in $versions; do
     if [[ $version == null ]]; then

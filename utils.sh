@@ -30,7 +30,16 @@ dl_yt() {
 }
 
 get_version() {
-    version=$(jq -r '.[].compatiblePackages[] | select(.name == "com.google.android.youtube") | .versions[] ' patches.json | sort -r | head -n 1)
+  version=""
+  versions=$(jq -r '.[].compatiblePackages[] | select(.name == "com.google.android.youtube") | .versions[]' patches.json)
+  for ver in $versions; do
+    if [[ $version == null ]]; then
+      continue
+    fi
+    if [[ $version > $version ]]; then
+      version=$version
+    fi
+  done
 }
 
 # Function Patch APK

@@ -12,4 +12,6 @@ From now on, this repository only patch YouTube Revanced with
 
 # Download page
 
+* Include Revanced and Revanced Extended
+
 https://luxysiv.github.io/revanced/

@@ -31,19 +31,14 @@ dl_yt() {
 
 # Get highest supported version 
 get_version() {
-  version=""
-  packages=$(jq -r '.[] | select(.compatiblePackages != null) | .compatiblePackages[] | select(.name == "com.google.android.youtube")' patches.json 2>/dev/null)
-  
-  if [[ $packages != "null" ]]; then
+    version=""
+    packages=$(jq -r '.[].compatiblePackages[] | select(.name == "com.google.android.youtube")' patches.json 2>/dev/null)  
     versions=$(jq -r '.versions[]' <<< "$packages" 2>/dev/null)
     for ver in $versions; do
-      if [[ $ver != "null" && ( -z $version || $ver > $version ) ]]; then
-        version=$ver
-      fi
+        if [[ $ver != null && ( -z $version || $ver > $version ) ]]; then
+            version=$ver
+        fi
     done
-  fi
-  
-  echo "Latest Version: $version"
 }
 
 # Function Patch APK
